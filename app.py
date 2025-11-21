@@ -27,7 +27,7 @@ CONFIDENCE_THRESHOLD = 0.65
 async def predict(file: UploadFile = File(...)):
     img = Image.open(file.file).resize((180, 180))
     img = img.convert("RGB")
-    img = np.array(img) / 255.0
+    img = np.array(img)
     img = np.expand_dims(img, 0)
 
     pred = model.predict(img)
