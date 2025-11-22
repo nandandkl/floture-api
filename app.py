@@ -20,7 +20,7 @@ model = keras.models.load_model("flower_model.h5")
 class_names = ["daisy", "dandelion", "rose", "sunflower", "tulip"]
 
 # Confidence threshold
-CONFIDENCE_THRESHOLD = 0.65
+CONFIDENCE_THRESHOLD = 0.50
 
 
 @app.post("/predict")
